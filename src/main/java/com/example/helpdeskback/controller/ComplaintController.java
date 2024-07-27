@@ -20,16 +20,19 @@ public class ComplaintController {
     public Complaint createComplaint(@RequestBody Complaint complaint) {
         return complaintService.addComplaint(complaint);
     }
+
     @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping("/{id}")
     public Complaint getComplaintById(@PathVariable Long id) {
         return complaintService.getComplaintById(id);
     }
+
     @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping("")
     public List<Complaint> getAllComplaints() {
         return complaintService.getAllComplaints();
     }
+
     @CrossOrigin(origins = "http://localhost:4200")
     @PutMapping("/{id}")
     public Complaint updateComplaint(@PathVariable Long id, @RequestBody Complaint complaintDetails) {
@@ -41,4 +44,5 @@ public class ComplaintController {
     public void deleteComplaint(@PathVariable Long id) {
         complaintService.deleteComplaint(id);
     }
+
 }

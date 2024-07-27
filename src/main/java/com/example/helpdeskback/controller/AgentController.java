@@ -16,33 +16,34 @@ public class AgentController {
     @Autowired
     private AgentService agentService;
 
-    @CrossOrigin()
+    @CrossOrigin(origins = "http://localhost:4200")
     @PostMapping("")
     public Agent createAgent(@RequestBody Agent agent) {
         return agentService.addAgent(agent);
     }
 
-    @CrossOrigin()
+    @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping("")
     public List<Agent> getAllAgents() {
         return agentService.getAllAgents();
     }
 
-    @CrossOrigin()
+    @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping("/{id}")
     public Agent getAgentById(@PathVariable Long id) {
         return agentService.getAgentById(id);
     }
 
-    @CrossOrigin()
+    @CrossOrigin(origins = "http://localhost:4200")
     @PutMapping("/{id}")
     public Agent updateAgent(@PathVariable Long id, @RequestBody Agent agentDetails) {
         return agentService.updateAgent(id, agentDetails);
     }
 
-    @CrossOrigin()
+    @CrossOrigin(origins = "http://localhost:4200")
     @DeleteMapping("/{id}")
     public void deleteAgent(@PathVariable Long id) {
+        System.out.println("888");
         agentService.deleteAgent(id);
     }
 }

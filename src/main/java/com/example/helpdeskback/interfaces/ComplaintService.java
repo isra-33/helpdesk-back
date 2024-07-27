@@ -12,5 +12,4 @@ public interface ComplaintService {
     void deleteComplaint(Long id);
     List<Complaint> getAllComplaints();
     Complaint getComplaintById(Long id);
-
 }

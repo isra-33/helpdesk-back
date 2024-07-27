@@ -50,4 +50,5 @@ public class ComplaintServiceImpl implements ComplaintService {
     public Complaint getComplaintById(Long id) {
         return complaintRepository.findById(id).orElse(null);
     }
+
 }

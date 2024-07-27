@@ -36,7 +36,6 @@ public class AgentServiceImpl implements AgentService {
         if (agentDetails != null) {
             agent.setAgentName(agentDetails.getAgentName());
             agent.setAgentEmail(agentDetails.getAgentEmail());
-            agent.setPassword(agentDetails.getPassword());
             agent.setComplaints(agentDetails.getComplaints());
         }
         return agent;

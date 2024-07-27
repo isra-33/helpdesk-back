@@ -31,9 +31,9 @@ public class Complaint {
     private Category category;
 
     @ManyToOne
-    @JsonIgnoreProperties({"complaints"})
     private Client client;
 
+    @JsonIgnoreProperties({"complaints"})
     @ManyToOne
     private Agent agent;
 }
