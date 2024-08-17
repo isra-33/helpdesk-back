@@ -46,4 +46,11 @@ public class AgentServiceImpl implements AgentService {
                 agent -> agentRepository.delete(agent)
         );
     }
+
+    @Override
+    public Agent findByEmail(String agentEmail) {
+        Optional<Agent> agent = agentRepository.findByAgentEmail(agentEmail);
+        return agent.orElse(null);  
+    }
+
 }
